@@ -8,7 +8,7 @@
         </encoder>
     </appender>
 
-    <logger name="logging" level="info" additivity="false">
+    <logger name="logging" level="off" additivity="false">
         <appender-ref ref="CONSOLE"/>
     </logger>
 
