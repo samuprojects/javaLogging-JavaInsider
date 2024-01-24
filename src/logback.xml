@@ -1,27 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
-    <appender name="console1" class="ch.qos.logback.core.ConsoleAppender">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>
-                [1] %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+                %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
             </Pattern>
         </encoder>
     </appender>
 
-    <appender name="console2" class="ch.qos.logback.core.ConsoleAppender">
-        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
-            <Pattern>
-                [2] %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
-            </Pattern>
-        </encoder>
-    </appender>
-
-    <logger name="x" level="warn">
-        <appender-ref ref="console1"/>
+    <logger name="ROOT" level="warn">
+        <appender-ref ref="CONSOLE"/>
     </logger>
 
-    <logger name="x.y" additivity="false">
-        <appender-ref ref="console2"/>
+    <logger name="app4" additivity="false">
     </logger>
 
 </configuration>
