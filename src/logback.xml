@@ -38,4 +38,10 @@
     <logger name="app5" level="INFO">
     </logger>
 
+    <logger name="app6" level="INFO">
+    </logger>
+
+    <logger name="app7" level="INFO">
+    </logger>
+
 </configuration>
