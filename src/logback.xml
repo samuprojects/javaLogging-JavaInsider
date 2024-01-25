@@ -1,5 +1,20 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
+
+    <appender name="console1" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+
+            <Pattern>
+                %green(%d{HH:mm:ss.SSS}) [%t] %highlight(%-5level) %logger{36} - %boldWhite(%msg%n)
+            </Pattern>
+        </encoder>
+    </appender>
+
+    <logger name="logging.appenders.AppAppender1" level="TRACE">
+        <appender-ref ref="console1"/>
+    </logger>
+
+<!-- aulas anteriores
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
             <Pattern>
@@ -20,7 +35,7 @@
         <appender-ref ref="CONSOLE"/>
     </logger>
 
-    <logger name="x" additivity="warn">
+    <logger name="x" level="warn">
         <appender-ref ref="console1"/>
     </logger>
 
@@ -43,5 +58,6 @@
 
     <logger name="app7" level="INFO">
     </logger>
+-->
 
 </configuration>
