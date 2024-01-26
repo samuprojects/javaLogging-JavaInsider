@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
+    <timestamp key="dateTimeFormat" datePattern="MM"/>
 
     <appender name="console1" class="ch.qos.logback.core.ConsoleAppender">
         <target>System.out</target>
@@ -21,12 +22,25 @@
         </encoder>
     </appender>
 
+    <appender name="file2" class="ch.qos.logback.core.FileAppender">
+        <file>logs/file2_${dateTimeFormat}.log</file>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
+
     <logger name="logging.appenders.AppAppender1" level="TRACE">
         <appender-ref ref="console1"/>
     </logger>
 
     <logger name="logging.appenders.FileAppender1" level="DEBUG">
         <appender-ref ref="file1"/>
+    </logger>
+
+    <logger name="logging.appenders.FileAppender2" level="DEBUG">
+        <appender-ref ref="file2"/>
     </logger>
 
 <!-- aulas anteriores
