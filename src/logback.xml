@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
+    <!--
     <timestamp key="dateTimeFormat" datePattern="MM"/>
 
     <appender name="console1" class="ch.qos.logback.core.ConsoleAppender">
@@ -30,6 +31,21 @@
             </Pattern>
         </encoder>
     </appender>
+    -->
+
+    <appender name="rollingFile1" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/rollingFile1.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/rollingFile1.%d{mm}.zip</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1GB</totalSizeCap>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <Pattern>
+                %d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n
+            </Pattern>
+        </encoder>
+    </appender>
 
     <logger name="logging.appenders.AppAppender1" level="TRACE">
         <appender-ref ref="console1"/>
@@ -42,6 +58,11 @@
     <logger name="logging.appenders.FileAppender2" level="DEBUG">
         <appender-ref ref="file2"/>
     </logger>
+
+    <logger name="logging.appenders.RollingFileAppender1" level="DEBUG">
+        <appender-ref ref="rollingFile1"/>
+    </logger>
+
 
 <!-- aulas anteriores
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">

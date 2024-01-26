@@ -1,0 +1,4 @@
+20:57:03.525 [main] DEBUG l.appenders.RollingFileAppender1 - DEBUG()
+20:57:03.541 [main] INFO  l.appenders.RollingFileAppender1 - INFO()
+20:57:03.542 [main] WARN  l.appenders.RollingFileAppender1 - WARN()
+20:57:03.542 [main] ERROR l.appenders.RollingFileAppender1 - ERROR()
