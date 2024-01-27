@@ -10,3 +10,4 @@
 23:43:03.821 [main] INFO  logging.appenders.FileAppender1 - INFO()
 23:43:03.822 [main] WARN  logging.appenders.FileAppender1 - WARN()
 23:43:03.822 [main] ERROR logging.appenders.FileAppender1 - ERROR()
+21:26:39.814 [main] INFO  logging.ClassB - this is a log message from Class B!

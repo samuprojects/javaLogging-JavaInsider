@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configuration>
-    <!--
+
     <timestamp key="dateTimeFormat" datePattern="MM"/>
 
     <appender name="console1" class="ch.qos.logback.core.ConsoleAppender">
@@ -31,7 +31,7 @@
             </Pattern>
         </encoder>
     </appender>
-    -->
+
 
     <appender name="rollingFile1" class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/rollingFile1.log</file>
@@ -61,6 +61,14 @@
 
     <logger name="logging.appenders.RollingFileAppender1" level="DEBUG">
         <appender-ref ref="rollingFile1"/>
+    </logger>
+
+    <logger name="logging.ClassA" level="INFO">
+        <appender-ref ref="console1"/>
+    </logger>
+
+    <logger name="logging.ClassB" level="INFO">
+        <appender-ref ref="file1"/>
     </logger>
 
 
